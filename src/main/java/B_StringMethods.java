@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class B_StringMethods {
     /**
      * <p>Makes the full name with specified the first and the last name. If a
@@ -9,7 +11,12 @@ public class B_StringMethods {
      * @return the full name
      */
     public static String fullName(String firstName, String lastName) {
-        return null;
+        if (firstName.length() >0 && lastName.length() > 0 )
+        {return firstName +" "+ lastName;} else if( lastName.length() == 0){ return firstName;}
+        else if(firstName.length() == 0)
+        {return lastName;}
+        else return "";
+
     }
 
     /**
@@ -23,7 +30,16 @@ public class B_StringMethods {
      * the given number
      */
     public static boolean certainNumberOfChar(String text, char ch, int cnt) {
-        return false;
+        int count = 0;
+        char cht;
+        for (int i = 0; i < text.length(); i++) {
+
+            cht = text.charAt(i);
+            if (cht == ch)
+                count++;
+        }
+        if (count == cnt ){ return true;} else {return false;}
+
     }
 
     /**
@@ -35,6 +51,6 @@ public class B_StringMethods {
      * @return the smaller word
      */
     public static String firstWord(String wordA, String wordB) {
-        return null;
+        return wordB;
     }
 }

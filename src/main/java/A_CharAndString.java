@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class A_CharAndString {
     /**
      * <p>Returns a string that contains the character sequence</p>
@@ -6,7 +8,9 @@ public class A_CharAndString {
      * @return a string instance of given character array
      */
     public static String chArrToString(char[] chArr) {
-        return null;
+        char[] ch = { 'a', '\\', '9'};
+        String s = String.valueOf(ch);
+        return s;
     }
 
     /**
@@ -16,6 +20,8 @@ public class A_CharAndString {
      * @return the ascii code of the given character
      */
     public static int asciiCode(char ch) {
-        return -1;
+        int ascii = ch;
+        return ascii;
+
     }
 }
