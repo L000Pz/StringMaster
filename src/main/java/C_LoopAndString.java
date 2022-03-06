@@ -71,28 +71,38 @@ public class C_LoopAndString {
      * @param c shift amount
      */
     public static String caesarDecrypt(String s, int c) {
+        if (c > 26) {
+            c = c % 26;
+        } else if (c < 0) {
+            c = (c % 26) + 26;
+        }
         String decrypted = "";
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            if (ch >= 'a' && ch <= 'z') {
-                ch = (char) (ch - c);
-                if (ch < 'a') {
-                    ch = (char) (ch - 'a' + 'z' + 1);
+            if (Character.isLetter(ch)) {
+                if (Character.isLowerCase(ch)) {
+                    ch = (char) (ch - c);
+                    if (ch < 'a') {
+                        decrypted += (char) (ch + (26));
+                    } else {
+                        decrypted += ch;
+                    }
+                } else if (Character.isUpperCase(ch)) {
+                    ch = (char) (ch - c);
+                    if (ch < 'A') {
+                        decrypted += (char) (ch + (26));
+                    } else {
+                        decrypted += ch;
+                    }
                 }
-                decrypted = decrypted + ch;
-            } else if (ch >= 'A' && ch <= 'Z') {
-                ch = (char) (ch - c);
-                if (ch < 'A') {
-                    ch = (char) (ch - 'A' + 'Z' + 1);
-                }
-                decrypted = decrypted + ch;
-            }else {
-                decrypted = decrypted + ch;
+            } else {
+                decrypted += ch;
             }
         }
-        return decrypted;
-    }
 
+        return decrypted;
+
+}
     /*
     If you have implemented all the previous parts completely and correctly
     feel free and add other methods as much as you want. Each extra method
