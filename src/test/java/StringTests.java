@@ -108,4 +108,30 @@ public class StringTests {
     /*
     Additional method tests should be provided below.
      */
+    @Test
+    public void NumericCheck_test(){
+        String number = "98765.23";
+        String words = "Programming is good!";
+        assertTrue(Extra_Methods.NumericCheck(number));
+        assertFalse(Extra_Methods.NumericCheck(words));
+    }
+
+    @Test
+    public void PalindromicString_test(){
+        String non_palindromic = "java, hello, wall, car";
+        assertTrue(Extra_Methods.PalindromicString("redivider"));
+        assertTrue(Extra_Methods.PalindromicString("deified"));
+        assertTrue(Extra_Methods.PalindromicString("civic"));
+        assertTrue(Extra_Methods.PalindromicString("radar"));
+        assertFalse(Extra_Methods.PalindromicString("java"));
+        assertFalse(Extra_Methods.PalindromicString("hello"));
+        assertFalse(Extra_Methods.PalindromicString("wall"));
+        assertFalse(Extra_Methods.PalindromicString("car"));
+    }
+
+    @Test
+    public void Lexicographic_String_test(){
+        assertEquals("ava wel", Extra_Methods.Lexicographic_String( "welcometojava", 3));
+        assertEquals("ho zo", Extra_Methods.Lexicographic_String( "horizon", 2));
+    }
 }
