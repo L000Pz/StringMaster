@@ -42,10 +42,10 @@ public class Extra_Methods {
     }
 
     /**
-     * <p>Write a program that will find Lexicographically smallest and largest substring of length k</p>
+     * <p>Write a program that will find Lexicographically smallest and largest substring of length k.</p>
      * <p>Note: Lexicographic order is also known as alphabetic order dictionary order.
-     * So “ball” is smaller than “cat”, “dog” is smaller than “dorm”.
-     * Capital letter always comes before smaller letter,
+     * So “ball” is smaller than “cat”, “dog” is smaller than “dorm”.</p>
+     * <p>Capital letter always comes before smaller letter,
      * so “Happy” is smaller than “happy” and “Zoo” is smaller than “ball”.</p>
      *
      * @param str a string containing english alphabets
